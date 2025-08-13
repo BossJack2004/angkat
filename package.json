@@ -1,0 +1,28 @@
+{
+  "name": "angkat-trading-enterprise",
+  "version": "1.0.0",
+  "description": "Angkat Trading Enterprise - Import/Export & Logistics Management System",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter @angkat-trading/web dev",
+    "build": "pnpm --filter @angkat-trading/web build",
+    "start": "pnpm --filter @angkat-trading/web start",
+    "lint": "pnpm --filter @angkat-trading/web lint",
+    "test": "pnpm --filter @angkat-trading/web test",
+    "db:reset": "supabase db reset",
+    "db:push": "supabase db push",
+    "db:seed": "psql -f supabase/sql/seed.sql",
+    "setup": "pnpm install && pnpm --filter @angkat-trading/web setup:shadcn"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "prettier": "^3.0.0",
+    "eslint": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.15.0"
+}
